@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 /**
 * This block of code is use for define module wise rounting
 */
-app.use('/v' + configs.version + '/', require('./routes/users'));
+app.use('/v' + configs.version + '/invoice', require('./routes/invoice'));
 
 app.listen(configs.appPort, function(){
 		console.log('running on 3009...');

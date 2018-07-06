@@ -1,5 +1,6 @@
-var pdf     =  require('html-pdf');
-var moment  = require('moment');
+var pdf         = require('html-pdf');
+var moment      = require('moment');
+var dummyData   = require('../configs/default.json');
 
 /**
 * This function is used for uploading files
@@ -56,7 +57,6 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   					</tr>
   				</table>
   				<!-- END Top -->
-
   				<table width="600" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
   					<tr>
   						<td class="td" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; width:600px; min-width:600px; Margin:0" width="600">
@@ -73,7 +73,6 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   								</tr>
   							</table>
   							<!-- END Header -->
-
   							<!-- Main -->
   							<table width="100%" border="0" cellspacing="0" cellpadding="0">
   								<tr>
@@ -84,7 +83,6 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   												<td>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0">
   														<tr>
-
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0">
   																	<tr>
@@ -101,12 +99,11 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   															<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="10"></td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																<div class="h2" style="color:#ffffff; font-family:Georgia, serif; min-width:auto !important; font-size:60px; line-height:64px; text-align:center">
   																	<em><img src="http://bardecode.com/images/code128_eg.jpg"/></em>
   																</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																<div class="h3-2-center" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:20px; line-height:26px; text-align:center; letter-spacing:5px">Mobile Number-` + configs.orderSeedData.address.phone + `</div>
+  																<div class="h3-2-center" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:20px; line-height:26px; text-align:center; letter-spacing:5px">Mobile Number-` + dummyData.orderDetails.address.phone + `</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="35" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   															</td>
   															<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="10"></td>
@@ -117,17 +114,14 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   											</tr>
   										</table>
   										<!-- END Head -->
-
   										<!-- Body -->
   										<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
   											<tr>
   												<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   												<td>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="35" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  													<div class="h3-1-center" style="color:#1e1e1e; font-family:Georgia, serif; min-width:auto !important; font-size:20px; line-height:26px; text-align:center">Item in order with order id <strong>` + configs.orderSeedData.serviceNumber + `</strong> has been delivered!Hope you liked our service. We would love to get your feedback.</div>
+  													<div class="h3-1-center" style="color:#1e1e1e; font-family:Georgia, serif; min-width:auto !important; font-size:20px; line-height:26px; text-align:center">Item in order with order id <strong>` + dummyData.orderDetails.serviceNumber + `</strong> has been delivered!Hope you liked our service. We would love to get your feedback.</div>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="20" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   													<!-- Button -->
   													<table width="100%" border="0" cellspacing="0" cellpadding="0">
   														<tr>
@@ -143,7 +137,7 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																							<a href="http://www.dtdc.in/tracking/tracking_results.asp" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none"><span class="link-white" style="color:#ffffff; text-decoration:none">TRACK YOUR ORDER</span></a>
   																						</div>
   																						<div class="text-btn" style="color:#ffffff; font-family:Arial, sans-serif; min-width:auto !important; font-size:16px; line-height:20px; text-align:center">
-  																							<a href="http://www.dtdc.in/tracking/tracking_results.asp" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none"><span class="link-white" style="color:#ffffff; text-decoration:none">AWB-` + configs.orderSeedData.trackerNumber +  `</span></a>
+  																							<a href="http://www.dtdc.in/tracking/tracking_results.asp" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none"><span class="link-white" style="color:#ffffff; text-decoration:none">AWB-` + dummyData.orderDetails.trackerNumber +  `</span></a>
   																						</div>
   																					</td>
   																					<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="15"></td>
@@ -168,7 +162,6 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																					<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   																					<td>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																						<div class="text-1" style="color:#577f91; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
   																							<strong>SHIPPING ADDRESS:</strong>
   																						</div>
@@ -182,18 +175,16 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																					<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   																					<td>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																						<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
-  																							<strong>` + configs.orderSeedData.address.name + `</strong>
+  																							<strong>` + dummyData.orderDetails.address.name + `</strong>
   																							<br/>` +
-  																							configs.orderSeedData.address.line1 + ` ` + configs.orderSeedData.address.line2 +
+  																							dummyData.orderDetails.address.line1 + ` ` + dummyData.orderDetails.address.line2 +
   																							`<br>` +
-                                                configs.orderSeedData.address.city + ` ` + configs.orderSeedData.address.state +
+                                                dummyData.orderDetails.address.city + ` ` + dummyData.orderDetails.address.state +
   																							`<br>
-                                                Pincode-` + configs.orderSeedData.address.pinCode +
+                                                Pincode-` + dummyData.orderDetails.address.pinCode +
   																							`<br>
-                                                Mobile-` + configs.orderSeedData.address.phone +
-
+                                                Mobile-` + dummyData.orderDetails.address.phone +
   																						`</div>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																					</td>
@@ -221,10 +212,10 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																					<td>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																						<div class="text-1" style="color:#577f91; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
-  																							<strong>Order.No:</strong> <span style="color: #1e1e1e;">` + configs.orderSeedData.serviceNumber + `</span>
+  																							<strong>Order.No:</strong> <span style="color: #1e1e1e;">` + dummyData.orderDetails.serviceNumber + `</span>
   																						</div>
   																						<div class="text-1" style="color:#577f91; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
-  																							<strong>Order On:</strong> <span style="color: #1e1e1e;">` + configs.orderSeedData.orderedOn + `</span>
+  																							<strong>Order On:</strong> <span style="color: #1e1e1e;">` + dummyData.orderDetails.orderedOn + `</span>
   																						</div>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																					</td>
@@ -252,7 +243,7 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																					<td>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																						<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">` +
-  																							 configs.orderSeedData.estimatedDate +
+  																							 dummyData.orderDetails.estimatedDate +
   																						`</div>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																					</td>
@@ -285,7 +276,6 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																<div class="text-center" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:center"><strong>Total</strong></div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   															</td>
   															<td style="border-bottom: 1px solid #f4f4f4;" class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   														</tr>
@@ -293,42 +283,31 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   															<td>&nbsp;</td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">` + configs.orderSeedData.productName + `</div>
+  																<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">` + dummyData.orderDetails.productName + `</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   															</td>
   															<td>&nbsp;</td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">priceDetails.quantity}}</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   															</td>
   															<td>&nbsp;</td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																<div class="text-center" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:center">RS.{{priceDetails.singleUnitAmount}}</div>
+  																<div class="text-center" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:center">RS.` + dummyData.priceDetails.singleUnitAmount + `</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   															</td>
   															<td>&nbsp;</td>
   														</tr>
-
   													</table>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-
   													<table width="100%" border="0" cellspacing="0" cellpadding="0">
   														<tr>
   															<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" height="1" bgcolor="#d2973b">&nbsp;</td>
   														</tr>
   													</table>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-
   													<table width="100%" border="0" cellspacing="0" cellpadding="0">
   														<tr>
   															<td align="right">
@@ -337,98 +316,74 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																		<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																			<div class="text-right" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:right">Subtotal:</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   																		<td width="50">
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.subtotalAmount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.subtotalAmount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   																	</tr>
-
   																		<tr>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																			<div class="text-right" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:right">GiftBox Prices:</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.giftPackAmount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.giftPackAmount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																	</tr>
-
   																		<tr>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																			<div class="text-right" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:right">Discount:</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.discount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.discount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																	</tr>
-
   																		<tr>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																			<div class="text-right" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:right">Shipping:</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.shipmentAmount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.shipmentAmount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																	</tr>
-
   																	<tr>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																			<div class="text-right" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:right">GST 12%:</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs{{priceDetails.grantAmount*10.7/100}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs` + (dummyData.priceDetails.grantAmount*10.7/100) + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																	</tr>
@@ -436,18 +391,14 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																			<div class="text-right" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:right"><strong>TOTAL:</strong></div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left"><strong>Rs{{priceDetails.grantAmount}}</strong></div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left"><strong>Rs` + dummyData.priceDetails.grantAmount + `</strong></div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																		</td>
   																		<td>&nbsp;</td>
   																	</tr>
@@ -456,13 +407,11 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   														</tr>
   													</table>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="35" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   												</td>
   												<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   											</tr>
   										</table>
   										<!-- END Body -->
-
   										<!-- Foot -->
   										<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#577f91">
   											<tr>
@@ -472,13 +421,10 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   															<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="3" bgcolor="#ffffff"></td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="30" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																<div class="h3-1-center" style="color:#ffffff; font-family:Georgia, serif; min-width:auto !important; font-size:20px; line-height:26px; text-align:center">
   																	<em>Follow Us</em>
   																</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
-
   																<!-- Socials -->
   																<table width="100%" border="0" cellspacing="0" cellpadding="0">
   																	<tr>
@@ -496,24 +442,20 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   																</table>
   																<!-- END Socials -->
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   															</td>
   															<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="3" bgcolor="#ffffff"></td>
   														</tr>
   													</table>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0">
   														<tr>
-
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="24" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   																<table width="100%" border="0" cellspacing="0" cellpadding="0">
   																	<tr>
   																		<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" height="3" bgcolor="#ffffff">&nbsp;</td>
   																	</tr>
   																</table>
   															</td>
-
   														</tr>
   													</table>
   												</td>
@@ -524,16 +466,13 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   								</tr>
   							</table>
   							<!-- END Main -->
-
   							<!-- Footer -->
   							<table width="100%" border="0" cellspacing="0" cellpadding="0">
   								<tr>
   									<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   									<td>
   										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="30" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   										<div class="text-footer" style="color:#666666; font-family:Arial, sans-serif; min-width:auto !important; font-size:12px; line-height:18px; text-align:center">
-
   											<br />
   											<a href="http://pikbuk.in/" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">Pikbuk Technology</span></a>
   											<span class="mobile-block"><span class="hide-for-mobile">|</span></span>
@@ -542,7 +481,6 @@ module.exports.generateAdminEmailBody = function(req, body, next) {
   											Phone: <a href="tel:+1655606605" target="_blank" class="link-1" style="color:#666666; text-decoration:none"><span class="link-1" style="color:#666666; text-decoration:none">085273 06537(Mon-Fri 10Am to 6 Pm)</span></a>
   										</div>
   										<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="30" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-
   									</td>
   									<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   								</tr>
@@ -585,17 +523,17 @@ module.exports.generateInvoicePdf = function(req, res, next) {
                <b>DELIVERY ADDRESS :</b>
              </span><br><br>
              <span style="font-size:25px; fontcolor:#000000; float:left;width:100%;">
-               <b>{{address.name}} </b><br>
-               <b>{{address.line1}},</b><br>
-               <b>{{landmark}},</b><br>
-               <b>{{address.line2}},</b><br>
-               <b>{{address.city}},{{address.state}}</b>
+               <b>` + dummyData.orderDetails.address.name + `</b><br>
+               <b>` + dummyData.orderDetails.address.line1 + `,</b><br>
+               <b>` + dummyData.orderDetails.address.landmark +`,</b><br>
+               <b>` + dummyData.orderDetails.address.line2 + `,</b><br>
+               <b>` + dummyData.orderDetails.address.city + `,` + dummyData.orderDetails.address.state + `</b>
              </span>
              <span style="font-size:20px; fontcolor:#000000; float:left;width:100%;">
-               <b>Pincode:-{{address.pinCode}}</b>
+               <b>Pincode:-` + dummyData.orderDetails.address.pinCode + `</b>
              </span>
              <span style="font-size:22px;fontcolor:#000000; float:left;width:100%;">
-               <b>Mobile No:-{{address.phone}}</b>
+               <b>Mobile No:-` + dummyData.orderDetails.address.phone + `</b>
              </span>
              <br>
           </div>
@@ -616,9 +554,9 @@ module.exports.generateInvoicePdf = function(req, res, next) {
             <span style="font-size:20px;fontcolor:#000000; float:left; text-align:left;padding:1px;width:90%;color:#353232;font-weight:100;">
               &nbsp; <b>Courier Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DTDC Express Limited</b>
               <br>
-              &nbsp;&nbsp;<b>Courier AWB No. : {{trackerNumber}}</b>
+              &nbsp;&nbsp;<b>Courier AWB No. : ` + dummyData.orderDetails.trackerNumber + `</b>
               <br>
-              &nbsp;&nbsp;<b>Order ID </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<b> {{serviceNumber}}</b>
+              &nbsp;&nbsp;<b>Order ID </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<b> ` + dummyData.orderDetails.serviceNumber + `</b>
             </span>
             <span style="font-size:20px; fontcolor:black; font-weight:100;float:left;padding:1px ;width:40%;color:#353232; text-align:right;">
             </span>
@@ -640,39 +578,39 @@ module.exports.generateInvoicePdf = function(req, res, next) {
          <table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%;">
            <tr>
              <th style="font-size:15px; fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Item</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;&nbsp;{{productName}}, HSN 9989</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;&nbsp; ` + dummyData.orderDetails.productName + `, HSN 9989</th>
            </tr>
            <tr>
              <th style=" font-size:15px; fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Qty</th>
-             <th style=" font-size:15px; fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;{{priceDetails.quantity}}</th>
+             <th style=" font-size:15px; fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;` + dummyData.priceDetails.quantity + `</th>
            </tr>
            <tr>
              <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Prices</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.{{priceDetails.singleUnitAmount}}</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.` + dummyData.priceDetails.singleUnitAmount + `</th>
            </tr>
            <tr>
              <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Gross Total</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.{{priceDetails.subtotalAmount}}</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.` + dummyData.priceDetails.subtotalAmount + `</th>
            </tr>
            <tr>
              <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Gift Box</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.{{priceDetails.giftPackAmount}}</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.` + dummyData.priceDetails.giftPackAmount + `</th>
            </tr>
            <tr>
              <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Discount</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.{{priceDetails.shipmentAmount}}</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.` + dummyData.priceDetails.shipmentAmount +`</th>
            </tr>
            <tr>
              <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Shipping</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.{{priceDetails.taxAmount}}</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.` + dummyData.priceDetails.taxAmount + `</th>
            </tr>
            <tr>
              <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;GST @12%</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.{priceDetails.grantAmount}}</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.` + dummyData.priceDetails.grantAmount + `</th>
            </tr>
            <tr>
              <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;&nbsp;Total</th>
-             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.{{priceDetails.grantAmount}}</th>
+             <th style="font-size:15px;fontcolor:black; border: 2px solid #dddddd; text-align: left; padding: 3px;">&nbsp;Rs.` + dummyData.priceDetails.grantAmount  + `</th>
            </tr>
          </table>
          <hr>
@@ -680,8 +618,8 @@ module.exports.generateInvoicePdf = function(req, res, next) {
          <!--Second Col-->
          <div style="width:100%;float:left;">
            <span style="font-size:20px;fontcolor:black; float:left; text-align:left;padding:1px;width:100%;color:#353232;">
-             <b>Order Date </b>: {{orderedOn}}
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <b>Order Date </b>: ` + dummyData.orderDetails.orderedOn +
+            `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            </span>
           </div>
           <hr>
@@ -708,9 +646,9 @@ module.exports.generateInvoicePdf = function(req, res, next) {
    </html>`;
 
    let options = { format: 'Tabloid' };
-   pdf.create(adminInvoicePdf, options).toFile('public/uploads/' + configs.orderSeedData.orderNo + '_invoice.pdf', function(err, res) {
+   pdf.create(adminInvoicePdf, options).toFile('public/uploads/' + dummyData.orderDetails.orderNo + '_invoice.pdf', function(err, res) {
      if (err)  return console.log(err);
-     console.log(res); // { filename: '/app/businesscard.pdf' }
+     console.log(res);
    });
    next();
 }
@@ -791,7 +729,6 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   												<td>
   													<table width="100%" border="0" cellspacing="0" cellpadding="0">
   														<tr>
-
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0">
   																	<tr>
@@ -847,7 +784,7 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																							<a href="http://www.dtdc.in/tracking/tracking_results.asp" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none"><span class="link-white" style="color:#ffffff; text-decoration:none">TRACK YOUR ORDER</span></a>
   																						</div>
   																						<div class="text-btn" style="color:#ffffff; font-family:Arial, sans-serif; min-width:auto !important; font-size:16px; line-height:20px; text-align:center">
-  																							<a href="http://www.dtdc.in/tracking/tracking_results.asp" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none"><span class="link-white" style="color:#ffffff; text-decoration:none">AWB-{{trackerNumber}}</span></a>
+  																							<a href="http://www.dtdc.in/tracking/tracking_results.asp" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none"><span class="link-white" style="color:#ffffff; text-decoration:none">AWB-` + dummyData.trackerNumber + `</span></a>
   																						</div>
   																					</td>
   																					<td class="img" style="font-size:0pt; line-height:0pt; text-align:left" width="15"></td>
@@ -886,17 +823,16 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																					<td>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																						<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
-  																							<strong>{{address.name}}</strong>
-  																							<br />
-  																							{{address.line1}} {{address.line2}}
-  																							<br>
-                                                                                              {{address.city}} {{address.state}}
-  																							<br>
-                                                                                              Pincode-{{address.pinCode}}
-  																							<br>
-                                                                                              Mobile-{{address.phone}}
-
-  																						</div>
+  																							<strong>` + dummyData.orderDetails.address.name + `</strong>
+  																							<br/>`
+  																							dummyData.orderDetails.address.line1 + ` `  + dummyData.orderDetails.address.line2 +
+  																							`<br>`+
+                                                dummyData.orderDetails.address.city + ` ` + dummyData.orderDetails.address.state +
+  																							`<br>
+                                                                                              Pincode-` + dummyData.orderDetails.address.pinCode +
+  																							`<br>
+                                                                                              Mobile-` +  dummyData.orderDetails.address.phone +
+  																						`</div>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																					</td>
   																					<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
@@ -925,10 +861,10 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
 
   																						<div class="text-1" style="color:#577f91; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
-  																							<strong>Order.No:</strong> <span style="color: #1e1e1e;">{{serviceNumber}}</span>
+  																							<strong>Order.No:</strong> <span style="color: #1e1e1e;">` + dummyData.orderDetails.serviceNumber + `</span>
   																						</div>
   																						<div class="text-1" style="color:#577f91; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
-  																							<strong>Order On:</strong> <span style="color: #1e1e1e;">{{orderedOn}}</span>
+  																							<strong>Order On:</strong> <span style="color: #1e1e1e;">` + dummyData.orderDetails.orderedOn + `</span>
   																						</div>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																					</td>
@@ -954,9 +890,9 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																					<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   																					<td>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="10" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																						<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">
-  																							 {{estimatedDate}}
-  																						</div>
+  																						<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">`
+  																							 + dummyData.orderDetails.estimatedDate +
+  																						`</div>
   																						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="15" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																					</td>
   																					<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
@@ -995,19 +931,19 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   															<td>&nbsp;</td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">{{productName}}</div>
+  																<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">` + dummyData.productName + `</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   															</td>
   															<td>&nbsp;</td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">{{priceDetails.quantity}}</div>
+  																<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">` + dummyData.priceDetails.quantity + `</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   															</td>
   															<td>&nbsp;</td>
   															<td>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																<div class="text-center" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:center">RS.{{priceDetails.singleUnitAmount}}</div>
+  																<div class="text-center" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:center">RS.` + dummyData.priceDetails.singleUnitAmount + `</div>
   																<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="8" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   															</td>
   															<td>&nbsp;</td>
@@ -1034,7 +970,7 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																		<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
   																		<td width="50">
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.subtotalAmount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.subtotalAmount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																		</td>
   																		<td class="content-spacing" style="font-size:0pt; line-height:0pt; text-align:left" width="20"></td>
@@ -1049,7 +985,7 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.giftPackAmount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.giftPackAmount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																		</td>
   																		<td>&nbsp;</td>
@@ -1064,7 +1000,7 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.discount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.discount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																		</td>
   																		<td>&nbsp;</td>
@@ -1079,7 +1015,7 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.{{priceDetails.shipmentAmount}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs.` + dummyData.priceDetails.shipmentAmount + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																		</td>
   																		<td>&nbsp;</td>
@@ -1094,7 +1030,7 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs{{priceDetails.grantAmount*10.7/100}}</div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left">Rs` + dummyData.priceDetails.grantAmount*10.7/100 + `</div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																		</td>
   																		<td>&nbsp;</td>
@@ -1109,7 +1045,7 @@ module.exports.generateUserEmailBody = function(req, body, next) {
   																		<td>&nbsp;</td>
   																		<td>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
-  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left"><strong>Rs{{priceDetails.grantAmount}}</strong></div>
+  																			<div class="text" style="color:#1e1e1e; font-family:Arial, sans-serif; min-width:auto !important; font-size:14px; line-height:20px; text-align:left"><strong>Rs` + dummyData.priceDetails.grantAmount + `</strong></div>
   																			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%"><tr><td height="3" class="spacer" style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">&nbsp;</td></tr></table>
   																		</td>
   																		<td>&nbsp;</td>

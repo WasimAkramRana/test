@@ -1,0 +1,38 @@
+{
+  "orderDetails" : {
+    "name"          : "Vasim Akram Rana",
+    "email"         : "jaiwas009@gmail.com",
+    "orderNo"       : 528,
+    "serviceNumber" : 4009,
+    "trackerNumber" : 4008,
+    "productName"   : "Piktiles",
+    "invoiceDate"   : "12-07-2018",
+    "invoiceNo"     : 5050,
+    "shipmentNo"    : 5060,
+    "orderedOn"     : "05-07-2018",
+    "estimatedDate" : "15-07-2018",
+    "status"        : "PROCESSING",
+    "address"       : {
+      "name"     : "Vasim",
+      "line1"    : "H.No. N558, Prateek Appartment",
+      "line2"    : "Sector 31, Gurgaon",
+      "landmark" : "Near By SBI Bank",
+      "city"     : "Gurgaon",
+      "state"    : "Hariyana",
+      "pinCode"  : 122002,
+      "phone"    : 9988776655
+    }
+  },
+  "priceDetails" : {
+    "grantAmount"      : 5000,
+    "quantity"         : 5,
+    "singleUnitAmount" : 1000,
+    "taxAmount"        : 500,
+    "shipmentAmount"   : 60,
+    "giftPackAmount"   : 50,
+    "discount"         : 0,
+    "mode"             : "CASH",
+    "subtotalAmount"   : 6015,
+    "total"            : 6015
+  }
+}
