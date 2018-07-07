@@ -83,7 +83,6 @@ function sendAdminInvoiceEmail(adminEmailTemplate, req, res, next) {
     html        : adminEmailTemplate,
     attachments : [{ filename : 'invoice.pdf', path : 'public/uploads/' + dummyData.orderDetails.orderNo + '_invoice.pdf', contentType : 'application/pdf' }]
   }
-
   smtpTransport.sendMail(mailOptions, function(error, response) {
     if(error) {
       res.status(401).json({status : 'error', message : error});
@@ -97,7 +96,6 @@ function sendAdminInvoiceEmail(adminEmailTemplate, req, res, next) {
 * This function is use for send invoice email to user
 */
 function sendUserInvoiceEmail(userEmailTemplate, req, res, next) {
-  debugger
   let mailOptions = {
     from        : configs.appName + '<' + configs.emailConfig.username  +'>',
     to          : req.body.userEmail,
